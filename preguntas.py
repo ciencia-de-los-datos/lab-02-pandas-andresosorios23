@@ -38,7 +38,7 @@ def pregunta_02() -> int:
     return tbl0.shape[1]
 
 
-def pregunta_03() -> pd.Series[int]:
+def pregunta_03() -> pd.Series:
     """
     ¿Cuál es la cantidad de registros por cada letra de la columna _c1 del archivo
     `tbl0.tsv`?
@@ -57,7 +57,7 @@ def pregunta_03() -> pd.Series[int]:
     return result
 
 
-def pregunta_04() -> pd.Series[Any]:
+def pregunta_04() -> pd.Series:
     """
     Calcule el promedio de _c2 por cada letra de la _c1 del archivo `tbl0.tsv`.
 
@@ -72,7 +72,7 @@ def pregunta_04() -> pd.Series[Any]:
     return tbl0.groupby("_c1")["_c2"].mean()
 
 
-def pregunta_05() -> pd.Series[Any]:
+def pregunta_05() -> pd.Series:
     """
     Calcule el valor máximo de _c2 por cada letra en la columna _c1 del archivo
     `tbl0.tsv`.
@@ -101,7 +101,7 @@ def pregunta_06() -> list[str]:
     return sorted(tbl1["_c4"].str.upper().unique())
 
 
-def pregunta_07() -> pd.Series[Any]:
+def pregunta_07() -> pd.Series:
     """
     Calcule la suma de la _c2 por cada letra de la _c1 del archivo `tbl0.tsv`.
 
@@ -225,7 +225,7 @@ def pregunta_12() -> pd.DataFrame:
     return pd.DataFrame({"_c0": result.index, "_c5": result.values})
 
 
-def pregunta_13() -> pd.Series[Any]:
+def pregunta_13() -> pd.Series:
     """
     Si la columna _c0 es la clave en los archivos `tbl0.tsv` y `tbl2.tsv`, compute la
     suma de tbl2._c5b por cada valor en tbl0._c1.
